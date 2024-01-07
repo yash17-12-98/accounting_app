@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 class ColorManager {
+  static Color transparent = Colors.transparent;
   static Color primary = HexColor.fromHex("#7FC4DC");
   static Color primaryOpacity70 = HexColor.fromHex("#B37FC4DC");
   static Color splashPrimary = HexColor.fromHex("#E5E6EE");

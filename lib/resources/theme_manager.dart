@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 import 'resources.dart';
 
@@ -17,11 +18,15 @@ ThemeData getApplicationTheme() {
       // App bar theme
       appBarTheme: AppBarTheme(
           centerTitle: true,
-          color: ColorManager.primary,
-          elevation: AppSize.s4,
-          shadowColor: ColorManager.primary,
+          systemOverlayStyle: const SystemUiOverlayStyle(
+              statusBarBrightness: Brightness.dark,
+              statusBarIconBrightness: Brightness.dark),
+          color: ColorManager.transparent,
+          elevation: AppSize.s0,
+          shadowColor: ColorManager.transparent,
           titleTextStyle: getRegularStyle(
-              color: ColorManager.white, fontSize: FontSize.s18)),
+              color: ColorManager.black, fontSize: FontSize.s18)),
+      drawerTheme: DrawerThemeData(backgroundColor: ColorManager.white),
 
       // Button theme
       buttonTheme: ButtonThemeData(
@@ -48,12 +53,16 @@ ThemeData getApplicationTheme() {
               color: ColorManager.primary, fontSize: FontSize.s14),
           titleLarge:
               getBoldStyle(color: ColorManager.black, fontSize: FontSize.s22),
-          titleMedium: getRegularStyle(
+          titleMedium: getMediumStyle(
               color: ColorManager.mediumGrey, fontSize: FontSize.s14),
-          titleSmall: getMediumStyle(
-              color: ColorManager.primary, fontSize: FontSize.s14),
-          labelMedium: getBoldStyle(
+          titleSmall: getRegularStyle(
+              color: ColorManager.mediumGrey, fontSize: FontSize.s14),
+          labelMedium: getSemiBoldStyle(
               color: ColorManager.darkGrey, fontSize: FontSize.s15),
+          labelSmall: getRegularStyle(
+              color: ColorManager.darkGrey, fontSize: FontSize.s15),
+          labelLarge: getSemiBoldStyle(
+              color: ColorManager.black, fontSize: FontSize.s17),
           bodyMedium: getMediumStyle(color: ColorManager.lightGrey),
           bodySmall: getRegularStyle(color: ColorManager.grey),
           bodyLarge: getRegularStyle(color: ColorManager.grey)),

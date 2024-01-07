@@ -10,6 +10,14 @@ class AppStrings {
   static const String save = "Save";
   static const String edit = "edit";
 
+  static const String login = "Login";
+  static const String loginTitle = "Login Account";
+  static const String loginSubTitle = "Login with Mobile Number & M-Pin";
+  static const String phoneNumber = "Phone Number";
+  static const String mPin = "M-Pin";
+
+  static const String master = "Master";
+
   static const String noDataFound = "No data found";
   static const String authentication = "Authentication";
   static const String loggedInSuccess = "You are successfully logged in";
