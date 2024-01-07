@@ -46,8 +46,10 @@ ThemeData getApplicationTheme() {
       textTheme: TextTheme(
           headlineMedium: getRegularStyle(
               color: ColorManager.primary, fontSize: FontSize.s14),
-          titleMedium:
-              getBoldStyle(color: ColorManager.black, fontSize: FontSize.s14),
+          titleLarge:
+              getBoldStyle(color: ColorManager.black, fontSize: FontSize.s22),
+          titleMedium: getRegularStyle(
+              color: ColorManager.mediumGrey, fontSize: FontSize.s14),
           titleSmall: getMediumStyle(
               color: ColorManager.primary, fontSize: FontSize.s14),
           labelMedium: getBoldStyle(

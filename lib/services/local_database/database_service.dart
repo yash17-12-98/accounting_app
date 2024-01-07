@@ -1,3 +1,7 @@
+import '../../model/model.dart';
+
 abstract class DatabaseService {
-  bool checkValidUser(int mobile, int mPin);
+  List<User> getUserList();
+
+  addUser(User user);
 }

@@ -11,4 +11,7 @@ class AppStrings {
   static const String edit = "edit";
 
   static const String noDataFound = "No data found";
+  static const String authentication = "Authentication";
+  static const String loggedInSuccess = "You are successfully logged in";
+  static const String loggedInFail = "Invalid login attempt. Login Fail!";
 }
