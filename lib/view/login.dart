@@ -54,6 +54,7 @@ class Login extends GetView<LoginController> {
                           controller: controller.mPinController,
                           focus: controller.mPinFocusNode,
                           validator: Validator.checkMPin,
+                          isSecure: true,
                           hintText: AppStrings.mPin,
                           textInputAction: TextInputAction.done,
                           keyboardType: TextInputType.number),

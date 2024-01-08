@@ -11,13 +11,13 @@ class User extends HiveObject {
   String lastName;
 
   @HiveField(2)
-  int mobile;
+  String mobile;
 
   @HiveField(3)
   String deviceId;
 
   @HiveField(4)
-  int mPin;
+  String mPin;
 
   User(
       {required this.firstName,

@@ -5,7 +5,16 @@ class UserAuthRepository {
 
   UserAuthRepository(this.databaseService);
 
-  bool checkValidUser(int mobile, int mPin) {
+  updateUserAuthStatus({bool isLoggedIn = false}) async {
+    await databaseService.updateAuthStatus(status: isLoggedIn);
+  }
+
+  bool getUserAuthStatus() {
+    final isLoggedIn = databaseService.getAuthStatus();
+    return isLoggedIn;
+  }
+
+  bool checkValidUser(String mobile, String mPin) {
     try {
       final userList = databaseService.getUserList();
 

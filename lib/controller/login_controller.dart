@@ -8,8 +8,8 @@ import 'base_controller.dart';
 
 class LoginController extends BaseController {
   final UserAuthRepository userAuthRepository;
-  final mobileController = TextEditingController(text: '123456');
-  final mPinController = TextEditingController(text: '123456');
+  final mobileController = TextEditingController();
+  final mPinController = TextEditingController();
 
   final FocusNode mobileFocusNode = FocusNode();
   final FocusNode mPinFocusNode = FocusNode();
@@ -18,19 +18,25 @@ class LoginController extends BaseController {
 
   LoginController(this.userAuthRepository);
 
-  onLogin() {
+  onLogin() async {
     if (formKey.currentState!.validate()) {
       FocusManager.instance.primaryFocus?.unfocus();
 
       final isValid = userAuthRepository.checkValidUser(
-          int.parse(mobileController.text), int.parse(mPinController.text));
+          mobileController.text, mPinController.text);
 
       if (isValid) {
-        Get.toNamed(Routes.dashBoardRoute);
+        await userAuthRepository.updateUserAuthStatus(isLoggedIn: true);
+        Get.offNamed(Routes.dashBoardRoute);
         showSnackBar(AppStrings.authentication, AppStrings.loggedInSuccess);
         return;
       }
       showSnackBar(AppStrings.authentication, AppStrings.loggedInFail);
     }
+  }
+
+  @override
+  void onInit() {
+    super.onInit();
   }
 }

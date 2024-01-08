@@ -15,4 +15,18 @@ class AppDatabaseService extends DatabaseService {
     final users = box.values.cast<User>().toList();
     return users;
   }
+
+  @override
+  bool getAuthStatus() {
+    final box = HiveBox.authBox();
+    final status = box.get('authStatus');
+    if (status != null) return status;
+    return false;
+  }
+
+  @override
+  updateAuthStatus({bool status = false}) async {
+    final box = HiveBox.authBox();
+    await box.put('authStatus', status);
+  }
 }

@@ -1,7 +1,7 @@
+import 'package:accounting_app/binding/auth_view_binding.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../binding/binding.dart';
 import '../resources/resources.dart';
 import 'app_constant.dart';
 import 'pages.dart';
@@ -17,8 +17,8 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: getApplicationTheme(),
       defaultTransition: Transition.rightToLeft,
-      initialRoute: Routes.loginRoute,
-      initialBinding: HomeBinding(),
+      initialRoute: Routes.authRoute,
+      initialBinding: AuthViewBinding(),
       getPages: pages,
     );
   }

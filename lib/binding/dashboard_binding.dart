@@ -5,6 +5,6 @@ import '../controller/controller.dart';
 class DashBoardBinding extends Bindings {
   @override
   void dependencies() {
-    Get.put<DashboardController>(DashboardController());
+    Get.put<DashboardController>(DashboardController(Get.find()));
   }
 }

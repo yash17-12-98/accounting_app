@@ -6,13 +6,28 @@ import '../view/view.dart';
 
 List<GetPage> pages = [
   GetPage(
+    name: Routes.authRoute,
+    page: () => const AuthView(),
+    binding: AuthViewBinding(),
+  ),
+  GetPage(
     name: Routes.loginRoute,
     page: () => const Login(),
-    binding: HomeBinding(),
+    binding: LoginBinding(),
   ),
   GetPage(
     name: Routes.dashBoardRoute,
     page: () => const DashBoard(),
     binding: DashBoardBinding(),
+  ),
+  GetPage(
+    name: Routes.divisionRoute,
+    page: () => const DashBoard(),
+    binding: DivisionBinding(),
+  ),
+  GetPage(
+    name: Routes.costCenterRoute,
+    page: () => const DashBoard(),
+    binding: CostCenterBinding(),
   )
 ];

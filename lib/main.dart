@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:accounting_app/app/app_constant.dart';
+import 'package:accounting_app/app/functions.dart';
 import 'package:accounting_app/model/model.dart';
 import 'package:flutter/material.dart';
 import 'package:hive/hive.dart';
@@ -16,8 +17,11 @@ Future<void> main() async {
 
 initializeLocalStorage() async {
   final Directory dir = await path.getApplicationSupportDirectory();
+  print('Directory Path ${dir.path}');
   Hive
     ..init(dir.path)
     ..registerAdapter(UserAdapter());
+  await Hive.openBox<bool>(AppConstant.authBox);
   await Hive.openBox<User>(AppConstant.userBox);
+  await addLocalUserAuth();
 }

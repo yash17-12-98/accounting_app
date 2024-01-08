@@ -19,9 +19,9 @@ class UserAdapter extends TypeAdapter<User> {
     return User(
       firstName: fields[0] as String,
       lastName: fields[1] as String,
-      mobile: fields[2] as int,
+      mobile: fields[2] as String,
       deviceId: fields[3] as String,
-      mPin: fields[4] as int,
+      mPin: fields[4] as String,
     );
   }
 
