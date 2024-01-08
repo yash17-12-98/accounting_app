@@ -4,4 +4,5 @@ class Routes {
   static const String dashBoardRoute = "/dashBoard";
   static const String divisionRoute = "/division";
   static const String costCenterRoute = "/costCenter";
+  static const String ledgerTypeRoute = "/ledgerType";
 }

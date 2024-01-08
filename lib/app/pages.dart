@@ -1,4 +1,3 @@
-import 'package:accounting_app/view/master/cost_center_form.dart';
 import 'package:get/get.dart';
 
 import '../binding/binding.dart';
@@ -30,5 +29,10 @@ List<GetPage> pages = [
     name: Routes.costCenterRoute,
     page: () => const CostCenterForm(),
     binding: CostCenterBinding(),
+  ),
+  GetPage(
+    name: Routes.ledgerTypeRoute,
+    page: () => const LedgerTypeForm(),
+    binding: LedgerTypeBinding(),
   )
 ];

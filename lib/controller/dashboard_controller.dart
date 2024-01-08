@@ -26,4 +26,8 @@ class DashboardController extends BaseController {
   onCostCentreTap() {
     Get.toNamed(Routes.costCenterRoute);
   }
+
+  onLedgerTypeTap() {
+    Get.toNamed(Routes.ledgerTypeRoute);
+  }
 }

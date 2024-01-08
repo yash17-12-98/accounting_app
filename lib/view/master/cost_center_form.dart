@@ -27,7 +27,7 @@ class CostCenterForm extends GetView<CostCenterController> {
                     style: getBoldStyle(
                         color: ColorManager.black, fontSize: FontSize.s30),
                   ),
-                  const SizedBox(height: 20.0),
+                  const SizedBox(height: 35.0),
                   AppTextField(
                     validator: Validator.checkCostCentreName,
                     title: AppStrings.costCenter,
@@ -37,7 +37,7 @@ class CostCenterForm extends GetView<CostCenterController> {
                     elevation: 10,
                     controller: controller.costCenterController,
                   ),
-                  const SizedBox(height: 20.0),
+                  const SizedBox(height: 30.0),
                   AppDropDownField<Division>(
                     title: AppStrings.division,
                     hint: AppStrings.selectDivision,

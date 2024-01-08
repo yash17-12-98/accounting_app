@@ -35,4 +35,18 @@ class Validator {
     }
     return null;
   }
+
+  static String? checkLedgerTypeName(String? name) {
+    if (name != null && name.isEmpty) {
+      return 'Please enter ledger type name';
+    }
+    return null;
+  }
+
+  static String? checkLedgerTypeRemarks(String? name) {
+    if (name != null && name.isEmpty) {
+      return 'Please enter ledger type remarks';
+    }
+    return null;
+  }
 }

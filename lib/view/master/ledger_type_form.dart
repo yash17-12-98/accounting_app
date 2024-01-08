@@ -1,13 +1,13 @@
 import 'package:accounting_app/app/validator.dart';
+import 'package:accounting_app/controller/controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../controller/controller.dart';
 import '../../resources/resources.dart';
 import '../../widgets/widget.dart';
 
-class DivisionForm extends GetView<DivisionController> {
-  const DivisionForm({super.key});
+class LedgerTypeForm extends GetView<LedgerTypeController> {
+  const LedgerTypeForm({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -28,13 +28,23 @@ class DivisionForm extends GetView<DivisionController> {
                   ),
                   const SizedBox(height: 35.0),
                   AppTextField(
-                    validator: Validator.checkDivisionName,
-                    title: AppStrings.division,
+                    validator: Validator.checkLedgerTypeName,
+                    title: AppStrings.ledgerType,
                     viewBorder: false,
-                    hintText: AppStrings.enterDivisionName,
+                    hintText: AppStrings.enterLedgerTypeName,
                     shadowColor: ColorManager.lightGrey,
                     elevation: 10,
-                    controller: controller.divisionNameController,
+                    controller: controller.ledgerTypeNameController,
+                  ),
+                  const SizedBox(height: 30.0),
+                  AppTextField(
+                    validator: Validator.checkLedgerTypeName,
+                    title: AppStrings.ledgerTypeRemarks,
+                    viewBorder: false,
+                    hintText: AppStrings.enterLedgerTypeRemarks,
+                    shadowColor: ColorManager.lightGrey,
+                    elevation: 10,
+                    controller: controller.ledgerTypeNameController,
                   ),
                   const SizedBox(height: 40.0),
                   MaterialButton(

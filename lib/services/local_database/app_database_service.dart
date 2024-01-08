@@ -1,6 +1,7 @@
 import 'package:accounting_app/app/boxes.dart';
 import 'package:accounting_app/model/master/cost_centre.dart';
 import 'package:accounting_app/model/master/division.dart';
+import 'package:accounting_app/model/master/ledger_type.dart';
 import 'package:accounting_app/model/user/user.dart';
 import 'package:accounting_app/services/local_database/database_service.dart';
 
@@ -49,5 +50,18 @@ class AppDatabaseService extends DatabaseService {
   addCostCentreForm(CostCentre costCentre) async {
     final box = HiveBox.costCentreBox();
     await box.add(costCentre);
+  }
+
+  @override
+  addLedgerTypeForm(LedgerType ledgerType) async {
+    final box = HiveBox.ledgerBox();
+    await box.add(ledgerType);
+  }
+
+  @override
+  List<LedgerType>? getLedgerTypeList() {
+    final box = HiveBox.ledgerBox();
+    final ledgerType = box.values.cast<LedgerType>().toList();
+    return ledgerType;
   }
 }

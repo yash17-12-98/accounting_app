@@ -1,4 +1,3 @@
-import 'package:accounting_app/model/master/cost_centre.dart';
 import 'package:hive/hive.dart';
 
 import '../model/model.dart';
@@ -14,4 +13,7 @@ class HiveBox {
 
   static Box<CostCentre> costCentreBox() =>
       Hive.box<CostCentre>(AppConstant.costCentreBox);
+
+  static Box<LedgerType> ledgerBox() =>
+      Hive.box<LedgerType>(AppConstant.ledgerTypeBox);
 }

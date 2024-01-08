@@ -14,4 +14,8 @@ abstract class DatabaseService {
   List<Division>? getDivisionsList();
 
   addCostCentreForm(CostCentre costCentre);
+
+  addLedgerTypeForm(LedgerType ledgerType);
+
+  List<LedgerType>? getLedgerTypeList();
 }

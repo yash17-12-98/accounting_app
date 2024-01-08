@@ -5,4 +5,5 @@ class AppConstant {
   static const String userBox = "user";
   static const String divisionBox = "Division";
   static const String costCentreBox = "CostCentre";
+  static const String ledgerTypeBox = "ledgerType";
 }
