@@ -5,8 +5,8 @@ import '../../controller/controller.dart';
 import '../../resources/resources.dart';
 import '../../widgets/widget.dart';
 
-class DivisionForm extends GetView<DivisionController> {
-  const DivisionForm({super.key});
+class CostCenterForm extends GetView<CostCenterController> {
+  const CostCenterForm({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -25,12 +25,18 @@ class DivisionForm extends GetView<DivisionController> {
                 ),
                 const SizedBox(height: 20.0),
                 AppTextField(
-                  title: AppStrings.division,
+                  title: AppStrings.costCenter,
                   viewBorder: false,
-                  hintText: AppStrings.enterDivisionName,
+                  hintText: AppStrings.enterCostCentreName,
                   shadowColor: ColorManager.lightGrey,
                   elevation: 10,
-                  controller: controller.divisionNameController,
+                  controller: controller.costCenterController,
+                ),
+                const SizedBox(height: 20.0),
+                AppDropDownField<String>(
+                  title: AppStrings.division,
+                  hint: AppStrings.selectDivision,
+                  items: controller.menuItems,
                 ),
                 const SizedBox(height: 40.0),
                 MaterialButton(

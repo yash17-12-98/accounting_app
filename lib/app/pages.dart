@@ -1,3 +1,4 @@
+import 'package:accounting_app/view/master/cost_center_form.dart';
 import 'package:get/get.dart';
 
 import '../binding/binding.dart';
@@ -27,7 +28,7 @@ List<GetPage> pages = [
   ),
   GetPage(
     name: Routes.costCenterRoute,
-    page: () => const DashBoard(),
+    page: () => const CostCenterForm(),
     binding: CostCenterBinding(),
   )
 ];

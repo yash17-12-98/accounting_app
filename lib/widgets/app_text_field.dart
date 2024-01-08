@@ -22,6 +22,8 @@ class AppTextField extends StatelessWidget {
   final String? Function(String?)? validator;
   final void Function()? onTap;
   final Function(String)? onFieldSubmitted;
+  final Color? shadowColor;
+  final double elevation;
 
   const AppTextField(
       {Key? key,
@@ -42,7 +44,9 @@ class AppTextField extends StatelessWidget {
       this.textInputAction,
       this.autofocus = false,
       this.errorText,
-      this.viewBorder = true})
+      this.viewBorder = true,
+      this.shadowColor,
+      this.elevation = 0.0})
       : super(key: key);
 
   @override
@@ -53,55 +57,69 @@ class AppTextField extends StatelessWidget {
         Visibility(
             visible: title != null,
             child: Text(title.toString(),
-                style: getMediumStyle(color: ColorManager.darkGrey))),
+                style: getMediumStyle(
+                    color: ColorManager.darkGrey, fontSize: FontSize.s18))),
         const SizedBox(height: 5),
-        TextFormField(
-          autofocus: autofocus,
-          readOnly: isReadOnly,
-          validator: validator,
-          onTap: onTap,
-          inputFormatters: inputFormatters,
-          autovalidateMode: AutovalidateMode.onUserInteraction,
-          controller: controller,
-          obscureText: isSecure,
-          keyboardType: keyboardType,
-          onChanged: onChanged,
-          textInputAction: textInputAction ?? TextInputAction.done,
-          textAlignVertical: TextAlignVertical.center,
-          textAlign: TextAlign.start,
-          autocorrect: false,
-          style: Theme.of(context).textTheme.labelMedium,
-          onFieldSubmitted: onFieldSubmitted,
-          decoration: InputDecoration(
-              hintText: hintText,
-              errorText: errorText,
-              errorMaxLines: 2,
-              enabledBorder: OutlineInputBorder(
-                borderSide: viewBorder
-                    ? BorderSide(width: 2.0, color: ColorManager.lightGrey)
-                    : BorderSide.none,
-                borderRadius: BorderRadius.circular(10.0),
+        Material(
+          elevation: elevation,
+          shape:
+              RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+          shadowColor: shadowColor,
+          child: Container(
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(
+                10.0,
               ),
-              focusedBorder: OutlineInputBorder(
-                borderSide: viewBorder
-                    ? BorderSide(width: 2.0, color: ColorManager.primary)
-                    : BorderSide.none,
-                borderRadius: BorderRadius.circular(10.0),
-              ),
-              errorBorder: OutlineInputBorder(
-                borderSide: viewBorder
-                    ? BorderSide(width: 2.0, color: ColorManager.error)
-                    : BorderSide.none,
-                borderRadius: BorderRadius.circular(10.0),
-              ),
-              focusedErrorBorder: OutlineInputBorder(
-                borderSide: viewBorder
-                    ? BorderSide(width: 2.0, color: ColorManager.error)
-                    : BorderSide.none,
-                borderRadius: BorderRadius.circular(10.0),
-              ),
-              prefixIcon: prefixIcon,
-              suffixIcon: suffixIcon),
+            ),
+            child: TextFormField(
+              autofocus: autofocus,
+              readOnly: isReadOnly,
+              validator: validator,
+              onTap: onTap,
+              inputFormatters: inputFormatters,
+              autovalidateMode: AutovalidateMode.onUserInteraction,
+              controller: controller,
+              obscureText: isSecure,
+              keyboardType: keyboardType,
+              onChanged: onChanged,
+              textInputAction: textInputAction ?? TextInputAction.done,
+              textAlignVertical: TextAlignVertical.center,
+              textAlign: TextAlign.start,
+              autocorrect: false,
+              style: Theme.of(context).textTheme.labelMedium,
+              onFieldSubmitted: onFieldSubmitted,
+              decoration: InputDecoration(
+                  hintText: hintText,
+                  errorText: errorText,
+                  errorMaxLines: 2,
+                  enabledBorder: OutlineInputBorder(
+                    borderSide: viewBorder
+                        ? BorderSide(width: 2.0, color: ColorManager.lightGrey)
+                        : BorderSide.none,
+                    borderRadius: BorderRadius.circular(10.0),
+                  ),
+                  focusedBorder: OutlineInputBorder(
+                    borderSide: viewBorder
+                        ? BorderSide(width: 2.0, color: ColorManager.primary)
+                        : BorderSide.none,
+                    borderRadius: BorderRadius.circular(10.0),
+                  ),
+                  errorBorder: OutlineInputBorder(
+                    borderSide: viewBorder
+                        ? BorderSide(width: 2.0, color: ColorManager.error)
+                        : BorderSide.none,
+                    borderRadius: BorderRadius.circular(10.0),
+                  ),
+                  focusedErrorBorder: OutlineInputBorder(
+                    borderSide: viewBorder
+                        ? BorderSide(width: 2.0, color: ColorManager.error)
+                        : BorderSide.none,
+                    borderRadius: BorderRadius.circular(10.0),
+                  ),
+                  prefixIcon: prefixIcon,
+                  suffixIcon: suffixIcon),
+            ),
+          ),
         ),
       ],
     );

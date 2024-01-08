@@ -7,7 +7,7 @@ class AppStrings {
   static const String email = "Email";
   static const String phone = "Phone";
   static const String jobTitle = "Job title";
-  static const String save = "Save";
+  static const String submit = "Submit";
   static const String edit = "edit";
 
   static const String login = "Login";
@@ -16,12 +16,16 @@ class AppStrings {
   static const String phoneNumber = "Phone Number";
   static const String mPin = "M-Pin";
   static const String logOut = "Logout";
-  static const String form = "form";
+  static const String form = "Form";
   static const String name = "Name";
 
   //Master form
   static const String master = "Master";
   static const String division = "Division";
+  static const String selectDivision = "Select a division";
+  static const String costCenter = "Cost Centre";
+  static const String enterDivisionName = "Enter division name'";
+  static const String enterCostCentreName = "Enter cost centre name'";
   static const String costCentre = "Cost Centre";
   static const String ledgerType = "Ledger Type";
   static const String mainSchedule = "Main Schedule";
