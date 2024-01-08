@@ -8,9 +8,17 @@ class AppDropDownField<T> extends StatelessWidget {
   final String? hint;
   final T? selectedValue;
   final List<DropdownMenuItem<T>>? items;
+  final String? Function(T?)? validator;
+  final void Function(T?)? onChanged;
 
   const AppDropDownField(
-      {super.key, this.selectedValue, this.items, this.title, this.hint});
+      {super.key,
+      this.selectedValue,
+      this.items,
+      this.title,
+      this.hint,
+      this.onChanged,
+      this.validator});
 
   @override
   Widget build(BuildContext context) {
@@ -26,6 +34,7 @@ class AppDropDownField<T> extends StatelessWidget {
             shape:
                 RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
             child: DropdownButtonFormField<T>(
+                autovalidateMode: AutovalidateMode.onUserInteraction,
                 hint: Text(
                   hint.orEmpty(),
                   style: getRegularStyle(
@@ -33,16 +42,25 @@ class AppDropDownField<T> extends StatelessWidget {
                 ),
                 decoration: InputDecoration(
                   enabledBorder: OutlineInputBorder(
-                    borderSide: BorderSide(color: ColorManager.white, width: 2),
+                    borderSide: BorderSide.none,
                     borderRadius: BorderRadius.circular(20),
                   ),
                   border: OutlineInputBorder(
-                    borderSide: BorderSide(color: ColorManager.white, width: 2),
+                    borderSide: BorderSide.none,
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                  errorBorder: OutlineInputBorder(
+                    borderSide: BorderSide.none,
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                  focusedBorder: OutlineInputBorder(
+                    borderSide: BorderSide.none,
                     borderRadius: BorderRadius.circular(20),
                   ),
                 ),
+                validator: validator,
                 value: selectedValue,
-                onChanged: (T? newValue) {},
+                onChanged: onChanged,
                 items: items)),
       ],
     );

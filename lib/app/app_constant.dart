@@ -3,4 +3,6 @@ class AppConstant {
 
   static const String authBox = "authentication";
   static const String userBox = "user";
+  static const String divisionBox = "Division";
+  static const String costCentreBox = "CostCentre";
 }

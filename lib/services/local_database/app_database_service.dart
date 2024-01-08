@@ -1,4 +1,6 @@
 import 'package:accounting_app/app/boxes.dart';
+import 'package:accounting_app/model/master/cost_centre.dart';
+import 'package:accounting_app/model/master/division.dart';
 import 'package:accounting_app/model/user/user.dart';
 import 'package:accounting_app/services/local_database/database_service.dart';
 
@@ -28,5 +30,24 @@ class AppDatabaseService extends DatabaseService {
   updateAuthStatus({bool status = false}) async {
     final box = HiveBox.authBox();
     await box.put('authStatus', status);
+  }
+
+  @override
+  addDivisionForm(Division division) async {
+    final box = HiveBox.divisionBox();
+    await box.add(division);
+  }
+
+  @override
+  List<Division>? getDivisionsList() {
+    final box = HiveBox.divisionBox();
+    final divisions = box.values.cast<Division>().toList();
+    return divisions;
+  }
+
+  @override
+  addCostCentreForm(CostCentre costCentre) async {
+    final box = HiveBox.costCentreBox();
+    await box.add(costCentre);
   }
 }

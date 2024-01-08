@@ -1,8 +1,11 @@
 import 'package:accounting_app/app/boxes.dart';
 import 'package:accounting_app/resources/color_manager.dart';
 import 'package:get/get.dart';
+import 'package:uuid/uuid.dart';
 
 import '../model/model.dart';
+
+var uuid = const Uuid();
 
 showSnackBar(String title, String message) {
   Get.snackbar(

@@ -38,4 +38,6 @@ class AppStrings {
   static const String authentication = "Authentication";
   static const String loggedInSuccess = "You are successfully logged in";
   static const String loggedInFail = "Invalid login attempt. Login Fail!";
+  static const String submitSuccessFully = "Submitted Successfully";
+  static const String submitFail = "Submit Failed";
 }

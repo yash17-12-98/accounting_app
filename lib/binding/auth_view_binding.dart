@@ -9,10 +9,9 @@ import '../repository/repository.dart';
 class AuthViewBinding extends Bindings {
   @override
   void dependencies() {
-    Get.lazyPut<DatabaseService>(() => AppDatabaseService(), fenix: true);
+    Get.lazyPut<DatabaseService>(() => AppDatabaseService());
 
-    Get.lazyPut<UserAuthRepository>(() => UserAuthRepository(Get.find()),
-        fenix: true);
+    Get.lazyPut<UserAuthRepository>(() => UserAuthRepository(Get.find()));
 
     Get.put<AuthViewController>(AuthViewController(Get.find()));
     Get.lazyPut<LoginController>(() => LoginController(Get.find()));

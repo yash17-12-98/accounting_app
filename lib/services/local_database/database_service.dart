@@ -8,4 +8,10 @@ abstract class DatabaseService {
   List<User> getUserList();
 
   addUser(User user);
+
+  addDivisionForm(Division division);
+
+  List<Division>? getDivisionsList();
+
+  addCostCentreForm(CostCentre costCentre);
 }

@@ -1,3 +1,4 @@
+import 'package:accounting_app/app/validator.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -15,31 +16,35 @@ class DivisionForm extends GetView<DivisionController> {
         body: SafeArea(
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 20.0),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  AppStrings.form,
-                  style: getBoldStyle(
-                      color: ColorManager.black, fontSize: FontSize.s30),
-                ),
-                const SizedBox(height: 20.0),
-                AppTextField(
-                  title: AppStrings.division,
-                  viewBorder: false,
-                  hintText: AppStrings.enterDivisionName,
-                  shadowColor: ColorManager.lightGrey,
-                  elevation: 10,
-                  controller: controller.divisionNameController,
-                ),
-                const SizedBox(height: 40.0),
-                MaterialButton(
-                    minWidth: double.infinity,
-                    color: ColorManager.primary,
-                    textColor: ColorManager.white,
-                    onPressed: controller.onSubmit,
-                    child: const Text(AppStrings.submit))
-              ],
+            child: Form(
+              key: controller.formKey,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    AppStrings.form,
+                    style: getBoldStyle(
+                        color: ColorManager.black, fontSize: FontSize.s30),
+                  ),
+                  const SizedBox(height: 20.0),
+                  AppTextField(
+                    validator: Validator.checkDivisionName,
+                    title: AppStrings.division,
+                    viewBorder: false,
+                    hintText: AppStrings.enterDivisionName,
+                    shadowColor: ColorManager.lightGrey,
+                    elevation: 10,
+                    controller: controller.divisionNameController,
+                  ),
+                  const SizedBox(height: 40.0),
+                  MaterialButton(
+                      minWidth: double.infinity,
+                      color: ColorManager.primary,
+                      textColor: ColorManager.white,
+                      onPressed: controller.onSubmit,
+                      child: const Text(AppStrings.submit))
+                ],
+              ),
             ),
           ),
         ));
