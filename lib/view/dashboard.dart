@@ -42,16 +42,32 @@ class DashBoard extends GetView<DashboardController> {
                 title: Text(AppStrings.master,
                     style: getSemiBoldStyle(
                         color: ColorManager.black, fontSize: FontSize.s18)),
-                children: const [
-                  AppDrawerElement(title: AppStrings.division),
-                  AppDrawerElement(title: AppStrings.costCentre),
-                  AppDrawerElement(title: AppStrings.ledgerType),
-                  AppDrawerElement(title: AppStrings.mainSchedule),
-                  AppDrawerElement(title: AppStrings.subSchedule),
-                  AppDrawerElement(title: AppStrings.ledgerGroup),
-                  AppDrawerElement(title: AppStrings.generalLedger),
+                children: [
                   AppDrawerElement(
-                      title: AppStrings.voucherType, borderVisible: false),
+                      title: AppStrings.division,
+                      onTap: controller.onDivisionTap),
+                  AppDrawerElement(
+                      title: AppStrings.costCentre,
+                      onTap: controller.onCostCentreTap),
+                  AppDrawerElement(
+                      title: AppStrings.ledgerType,
+                      onTap: controller.onDivisionTap),
+                  AppDrawerElement(
+                      title: AppStrings.mainSchedule,
+                      onTap: controller.onDivisionTap),
+                  AppDrawerElement(
+                      title: AppStrings.subSchedule,
+                      onTap: controller.onDivisionTap),
+                  AppDrawerElement(
+                      title: AppStrings.ledgerGroup,
+                      onTap: controller.onDivisionTap),
+                  AppDrawerElement(
+                      title: AppStrings.generalLedger,
+                      onTap: controller.onDivisionTap),
+                  AppDrawerElement(
+                      title: AppStrings.voucherType,
+                      borderVisible: false,
+                      onTap: controller.onDivisionTap),
                 ],
               ),
               const SizedBox(height: 10),
@@ -64,6 +80,6 @@ class DashBoard extends GetView<DashboardController> {
             ],
           ),
         ),
-        body: Container());
+        body: SafeArea(child: Container()));
   }
 }

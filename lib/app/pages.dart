@@ -22,7 +22,7 @@ List<GetPage> pages = [
   ),
   GetPage(
     name: Routes.divisionRoute,
-    page: () => const DashBoard(),
+    page: () => const DivisionForm(),
     binding: DivisionBinding(),
   ),
   GetPage(

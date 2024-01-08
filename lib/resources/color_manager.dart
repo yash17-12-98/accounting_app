@@ -7,7 +7,7 @@ class ColorManager {
   static Color tileGrey = HexColor.fromHex("#E5E6EE");
 
   static Color lightGrey = HexColor.fromHex("#B9BAC8");
-  static Color darkGrey = HexColor.fromHex("#8791A3");
+  static Color darkGrey = HexColor.fromHex("#55555F");
   static Color mediumGrey = HexColor.fromHex("#6B7285");
   static Color grey = HexColor.fromHex("#737477");
 

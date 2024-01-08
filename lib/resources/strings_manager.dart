@@ -16,6 +16,8 @@ class AppStrings {
   static const String phoneNumber = "Phone Number";
   static const String mPin = "M-Pin";
   static const String logOut = "Logout";
+  static const String form = "form";
+  static const String name = "Name";
 
   //Master form
   static const String master = "Master";

@@ -18,4 +18,12 @@ class DashboardController extends BaseController {
     await userAuthRepository.updateUserAuthStatus(isLoggedIn: false);
     Get.offNamed(Routes.loginRoute);
   }
+
+  onDivisionTap() {
+    Get.toNamed(Routes.divisionRoute);
+  }
+
+  onCostCentreTap() {
+    Get.toNamed(Routes.costCenterRoute);
+  }
 }

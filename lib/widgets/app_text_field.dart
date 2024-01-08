@@ -53,7 +53,7 @@ class AppTextField extends StatelessWidget {
         Visibility(
             visible: title != null,
             child: Text(title.toString(),
-                style: Theme.of(context).textTheme.labelMedium)),
+                style: getMediumStyle(color: ColorManager.darkGrey))),
         const SizedBox(height: 5),
         TextFormField(
           autofocus: autofocus,
