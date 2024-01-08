@@ -4,7 +4,7 @@ class ColorManager {
   static Color transparent = Colors.transparent;
   static Color primary = HexColor.fromHex("#7FC4DC");
   static Color primaryOpacity70 = HexColor.fromHex("#B37FC4DC");
-  static Color splashPrimary = HexColor.fromHex("#E5E6EE");
+  static Color tileGrey = HexColor.fromHex("#E5E6EE");
 
   static Color lightGrey = HexColor.fromHex("#B9BAC8");
   static Color darkGrey = HexColor.fromHex("#8791A3");

@@ -1,9 +1,9 @@
-import 'package:accounting_app/widgets/app_drawer_element.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../controller/controller.dart';
 import '../resources/resources.dart';
+import '../widgets/widget.dart';
 
 class DashBoard extends GetView<DashboardController> {
   const DashBoard({super.key});
@@ -35,12 +35,13 @@ class DashBoard extends GetView<DashboardController> {
                   child: IconButton(
                       onPressed: () => Get.back(),
                       icon: const Icon(Icons.arrow_back))),
+              const SizedBox(height: 5),
               ExpansionTile(
                 shape: const RoundedRectangleBorder(side: BorderSide.none),
-                collapsedBackgroundColor: ColorManager.splashPrimary,
+                collapsedBackgroundColor: ColorManager.tileGrey,
                 title: Text(AppStrings.master,
-                    style: getBoldStyle(
-                        color: ColorManager.black, fontSize: FontSize.s25)),
+                    style: getSemiBoldStyle(
+                        color: ColorManager.black, fontSize: FontSize.s18)),
                 children: const [
                   AppDrawerElement(title: AppStrings.division),
                   AppDrawerElement(title: AppStrings.costCentre),
@@ -49,11 +50,17 @@ class DashBoard extends GetView<DashboardController> {
                   AppDrawerElement(title: AppStrings.subSchedule),
                   AppDrawerElement(title: AppStrings.ledgerGroup),
                   AppDrawerElement(title: AppStrings.generalLedger),
-                  AppDrawerElement(title: AppStrings.voucherType),
+                  AppDrawerElement(
+                      title: AppStrings.voucherType, borderVisible: false),
                 ],
               ),
+              const SizedBox(height: 10),
               AppDrawerElement(
-                  title: AppStrings.logOut, onTap: controller.onLogout)
+                title: AppStrings.logOut,
+                onTap: controller.onLogout,
+                tileColor: ColorManager.tileGrey,
+                borderVisible: false,
+              )
             ],
           ),
         ),
