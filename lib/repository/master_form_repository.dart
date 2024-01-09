@@ -1,6 +1,6 @@
-import 'package:accounting_app/model/master/cost_centre.dart';
-import 'package:accounting_app/model/master/division.dart';
 import 'package:accounting_app/services/local_database/database_service.dart';
+
+import '../model/model.dart';
 
 class MasterFormRepository {
   final DatabaseService databaseService;
@@ -34,6 +34,16 @@ class MasterFormRepository {
   Future<bool> addCostCentre(CostCentre costCentre) async {
     try {
       await databaseService.addCostCentreForm(costCentre);
+      return true;
+    } catch (e) {
+      print("Exception: ${e.toString()}");
+      return false;
+    }
+  }
+
+  Future<bool> addLedgerType(LedgerType ledgerType) async {
+    try {
+      await databaseService.addLedgerTypeForm(ledgerType);
       return true;
     } catch (e) {
       print("Exception: ${e.toString()}");

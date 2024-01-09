@@ -2,7 +2,7 @@ import 'package:hive/hive.dart';
 
 part 'ledger_type.g.dart';
 
-@HiveType(typeId: 1)
+@HiveType(typeId: 3)
 class LedgerType extends HiveObject {
   @HiveField(0, defaultValue: 'ledgerType_id')
   String ledgerTypeId;

@@ -38,13 +38,13 @@ class LedgerTypeForm extends GetView<LedgerTypeController> {
                   ),
                   const SizedBox(height: 30.0),
                   AppTextField(
-                    validator: Validator.checkLedgerTypeName,
+                    validator: Validator.checkLedgerTypeRemarks,
                     title: AppStrings.ledgerTypeRemarks,
                     viewBorder: false,
                     hintText: AppStrings.enterLedgerTypeRemarks,
                     shadowColor: ColorManager.lightGrey,
                     elevation: 10,
-                    controller: controller.ledgerTypeNameController,
+                    controller: controller.ledgerTypeRemarkController,
                   ),
                   const SizedBox(height: 40.0),
                   MaterialButton(

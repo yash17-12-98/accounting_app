@@ -8,7 +8,7 @@ part of 'ledger_type.dart';
 
 class LedgerTypeAdapter extends TypeAdapter<LedgerType> {
   @override
-  final int typeId = 1;
+  final int typeId = 3;
 
   @override
   LedgerType read(BinaryReader reader) {
