@@ -1,17 +1,17 @@
 import 'package:hive/hive.dart';
 
-part 'ledger_type.g.dart';
+part 'ledger_group.g.dart';
 
-@HiveType(typeId: 3)
-class LedgerType extends HiveObject {
-  @HiveField(0, defaultValue: 'ledgerType_id')
-  String ledgerTypeId;
+@HiveType(typeId: 6)
+class LedgerGroup extends HiveObject {
+  @HiveField(0, defaultValue: 'ledgerGroup_id')
+  String ledgerGroupId;
 
-  @HiveField(1, defaultValue: 'ledgerType_name')
-  String ledgerTypeName;
+  @HiveField(1, defaultValue: 'ledgerGroup_name')
+  String ledgerGroupName;
 
-  @HiveField(2, defaultValue: 'ledgerType_remarks')
-  String ledgerTypeRemarks;
+  @HiveField(2, defaultValue: 'ledgerGroup_remarks')
+  String ledgerGroupRemarks;
 
   @HiveField(3, defaultValue: 'status')
   String? status;
@@ -34,10 +34,10 @@ class LedgerType extends HiveObject {
   @HiveField(9, defaultValue: 'deletedBy')
   String? deletedBy;
 
-  LedgerType(
-      {required this.ledgerTypeId,
-      required this.ledgerTypeName,
-      required this.ledgerTypeRemarks,
+  LedgerGroup(
+      {required this.ledgerGroupId,
+      required this.ledgerGroupName,
+      required this.ledgerGroupRemarks,
       this.status,
       this.createdAt,
       this.createdBy,

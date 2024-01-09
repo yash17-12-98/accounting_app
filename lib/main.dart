@@ -30,5 +30,10 @@ initializeLocalStorage() async {
   await Hive.openBox<Division>(AppConstant.divisionBox);
   await Hive.openBox<CostCentre>(AppConstant.costCentreBox);
   await Hive.openBox<LedgerType>(AppConstant.ledgerTypeBox);
+  await Hive.openBox<MainSchedule>(AppConstant.ledgerTypeBox);
+  await Hive.openBox<SubSchedule>(AppConstant.ledgerTypeBox);
+  await Hive.openBox<LedgerGroup>(AppConstant.ledgerTypeBox);
+  await Hive.openBox<GeneralLedger>(AppConstant.ledgerTypeBox);
+  await Hive.openBox<VoucherType>(AppConstant.ledgerTypeBox);
   await addLocalUserAuth();
 }

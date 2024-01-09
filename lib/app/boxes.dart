@@ -16,4 +16,19 @@ class HiveBox {
 
   static Box<LedgerType> ledgerBox() =>
       Hive.box<LedgerType>(AppConstant.ledgerTypeBox);
+
+  static Box<MainSchedule> mainScheduleBox() =>
+      Hive.box<MainSchedule>(AppConstant.mainScheduleBox);
+
+  static Box<SubSchedule> subScheduleBox() =>
+      Hive.box<SubSchedule>(AppConstant.subScheduleBox);
+
+  static Box<LedgerGroup> ledgerGroupBox() =>
+      Hive.box<LedgerGroup>(AppConstant.ledgerGroupBox);
+
+  static Box<GeneralLedger> generalLedgerBox() =>
+      Hive.box<GeneralLedger>(AppConstant.generalLedgerBox);
+
+  static Box<VoucherType> voucherTypeBox() =>
+      Hive.box<VoucherType>(AppConstant.voucherTypeBox);
 }

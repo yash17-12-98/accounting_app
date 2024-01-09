@@ -1,17 +1,17 @@
 import 'package:hive/hive.dart';
 
-part 'ledger_type.g.dart';
+part 'sub_schedule.g.dart';
 
-@HiveType(typeId: 3)
-class LedgerType extends HiveObject {
-  @HiveField(0, defaultValue: 'ledgerType_id')
-  String ledgerTypeId;
+@HiveType(typeId: 5)
+class SubSchedule extends HiveObject {
+  @HiveField(0, defaultValue: 'subSchedule_id')
+  String subScheduleId;
 
-  @HiveField(1, defaultValue: 'ledgerType_name')
-  String ledgerTypeName;
+  @HiveField(1, defaultValue: 'subSchedule_name')
+  String subScheduleName;
 
-  @HiveField(2, defaultValue: 'ledgerType_remarks')
-  String ledgerTypeRemarks;
+  @HiveField(2, defaultValue: 'subSchedule_remarks')
+  String subScheduleRemarks;
 
   @HiveField(3, defaultValue: 'status')
   String? status;
@@ -34,10 +34,10 @@ class LedgerType extends HiveObject {
   @HiveField(9, defaultValue: 'deletedBy')
   String? deletedBy;
 
-  LedgerType(
-      {required this.ledgerTypeId,
-      required this.ledgerTypeName,
-      required this.ledgerTypeRemarks,
+  SubSchedule(
+      {required this.subScheduleId,
+      required this.subScheduleName,
+      required this.subScheduleRemarks,
       this.status,
       this.createdAt,
       this.createdBy,
