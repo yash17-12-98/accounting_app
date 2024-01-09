@@ -6,7 +6,7 @@ import '../../../controller/controller.dart';
 import '../../../resources/resources.dart';
 import '../../../widgets/widget.dart';
 
-class LedgerTypeForm extends GetView<LedgerTypeController> {
+class LedgerTypeForm extends GetView<LedgerTypeFormController> {
   const LedgerTypeForm({super.key});
 
   @override

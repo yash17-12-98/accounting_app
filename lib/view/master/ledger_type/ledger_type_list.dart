@@ -24,7 +24,7 @@ class LedgerTypeList extends GetView<LedgerTypeController> {
                     color: ColorManager.lightPurple,
                     borderRadius: BorderRadius.circular(10.0)),
                 child: InkWell(
-                  onTap: () => Get.toNamed(Routes.divisionFormRoute),
+                  onTap: () => Get.toNamed(Routes.ledgerTypeFormRoute),
                   child: const Padding(
                     padding: EdgeInsets.all(10.0),
                     child: Icon(
