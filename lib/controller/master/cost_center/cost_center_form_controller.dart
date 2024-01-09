@@ -4,14 +4,14 @@ import 'package:accounting_app/repository/master_form_repository.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../model/model.dart';
-import '../resources/resources.dart';
-import 'base_controller.dart';
+import '../../../model/model.dart';
+import '../../../resources/resources.dart';
+import '../../base_controller.dart';
 
-class CostCenterController extends BaseController {
+class CostCenterFormController extends BaseController {
   final MasterFormRepository masterFormRepository;
 
-  CostCenterController(this.masterFormRepository);
+  CostCenterFormController(this.masterFormRepository);
 
   final costCenterController = TextEditingController();
   final formKey = GlobalKey<FormState>();

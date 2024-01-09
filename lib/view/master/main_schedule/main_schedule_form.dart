@@ -2,13 +2,12 @@ import 'package:accounting_app/app/validator.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../controller/controller.dart';
-import '../../model/model.dart';
-import '../../resources/resources.dart';
-import '../../widgets/widget.dart';
+import '../../../controller/controller.dart';
+import '../../../resources/resources.dart';
+import '../../../widgets/widget.dart';
 
-class CostCenterForm extends GetView<CostCenterController> {
-  const CostCenterForm({super.key});
+class MainScheduleForm extends GetView<MainScheduleFormController> {
+  const MainScheduleForm({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -29,29 +28,20 @@ class CostCenterForm extends GetView<CostCenterController> {
                   ),
                   const SizedBox(height: 35.0),
                   AppTextField(
-                    validator: Validator.checkCostCentreName,
-                    title: AppStrings.costCenter,
+                    validator: Validator.checkDivisionName,
+                    title: AppStrings.division,
                     viewBorder: false,
-                    hintText: AppStrings.enterCostCentreName,
+                    hintText: AppStrings.enterDivisionName,
                     shadowColor: ColorManager.lightGrey,
                     elevation: 10,
-                    controller: controller.costCenterController,
-                  ),
-                  const SizedBox(height: 30.0),
-                  AppDropDownField<Division>(
-                    title: AppStrings.division,
-                    hint: AppStrings.selectDivision,
-                    selectedValue: controller.division,
-                    items: controller.menuItems,
-                    validator: Validator.checkDivisionSelection,
-                    onChanged: controller.onDivisionChange,
+                    controller: controller.mainScheduleNameController,
                   ),
                   const SizedBox(height: 40.0),
                   MaterialButton(
                       minWidth: double.infinity,
                       color: ColorManager.primary,
                       textColor: ColorManager.white,
-                      onPressed: controller.onSubmit,
+                      onPressed: () {},
                       child: const Text(AppStrings.submit))
                 ],
               ),

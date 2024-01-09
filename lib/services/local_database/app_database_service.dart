@@ -66,13 +66,13 @@ class AppDatabaseService extends DatabaseService {
 
   @override
   addLedgerTypeForm(LedgerType ledgerType) async {
-    final box = HiveBox.ledgerBox();
+    final box = HiveBox.ledgerTypeBox();
     await box.add(ledgerType);
   }
 
   @override
   List<LedgerType>? getLedgerTypeList() {
-    final box = HiveBox.ledgerBox();
+    final box = HiveBox.ledgerTypeBox();
     final ledgerTypes = box.values.cast<LedgerType>().toList();
     return ledgerTypes;
   }

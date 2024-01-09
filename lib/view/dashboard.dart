@@ -45,19 +45,29 @@ class DashBoard extends GetView<DashboardController> {
                 children: [
                   AppDrawerElement(
                       title: AppStrings.division,
-                      onTap: controller.onDivisionTap),
+                      onTap: () => controller.onDrawerTap(0)),
                   AppDrawerElement(
                       title: AppStrings.costCentre,
-                      onTap: controller.onCostCentreTap),
+                      onTap: () => controller.onDrawerTap(1)),
                   AppDrawerElement(
                       title: AppStrings.ledgerType,
-                      onTap: controller.onLedgerTypeTap),
-                  AppDrawerElement(title: AppStrings.mainSchedule),
-                  AppDrawerElement(title: AppStrings.subSchedule),
-                  AppDrawerElement(title: AppStrings.ledgerGroup),
-                  AppDrawerElement(title: AppStrings.generalLedger),
-                  const AppDrawerElement(
-                      title: AppStrings.voucherType, borderVisible: false),
+                      onTap: () => controller.onDrawerTap(2)),
+                  AppDrawerElement(
+                      title: AppStrings.mainSchedule,
+                      onTap: () => controller.onDrawerTap(3)),
+                  AppDrawerElement(
+                      title: AppStrings.subSchedule,
+                      onTap: () => controller.onDrawerTap(4)),
+                  AppDrawerElement(
+                      title: AppStrings.ledgerGroup,
+                      onTap: () => controller.onDrawerTap(5)),
+                  AppDrawerElement(
+                      title: AppStrings.generalLedger,
+                      onTap: () => controller.onDrawerTap(6)),
+                  AppDrawerElement(
+                      title: AppStrings.voucherType,
+                      borderVisible: false,
+                      onTap: () => controller.onDrawerTap(7)),
                 ],
               ),
               const SizedBox(height: 10),

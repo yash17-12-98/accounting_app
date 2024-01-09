@@ -22,17 +22,82 @@ List<GetPage> pages = [
   ),
   GetPage(
     name: Routes.divisionRoute,
+    page: () => const DivisionList(),
+    binding: DivisionListBinding(),
+  ),
+  GetPage(
+    name: Routes.divisionFormRoute,
     page: () => const DivisionForm(),
-    binding: DivisionBinding(),
+    binding: DivisionFormBinding(),
   ),
   GetPage(
     name: Routes.costCenterRoute,
+    page: () => const CostCenterList(),
+    binding: CostCenterListBinding(),
+  ),
+  GetPage(
+    name: Routes.costCenterFormRoute,
     page: () => const CostCenterForm(),
-    binding: CostCenterBinding(),
+    binding: CostCenterFormBinding(),
   ),
   GetPage(
     name: Routes.ledgerTypeRoute,
+    page: () => const LedgerTypeList(),
+    binding: LedgerTypeListBinding(),
+  ),
+  GetPage(
+    name: Routes.ledgerTypeFormRoute,
     page: () => const LedgerTypeForm(),
-    binding: LedgerTypeBinding(),
+    binding: LedgerTypeFormBinding(),
+  ),
+  GetPage(
+    name: Routes.mainScheduleRoute,
+    page: () => const MainScheduleList(),
+    binding: MainScheduleListBinding(),
+  ),
+  GetPage(
+    name: Routes.mainScheduleFormRoute,
+    page: () => const MainScheduleForm(),
+    binding: MainScheduleFormBinding(),
+  ),
+  GetPage(
+    name: Routes.subScheduleRoute,
+    page: () => const SubScheduleList(),
+    binding: SubScheduleListBinding(),
+  ),
+  GetPage(
+    name: Routes.subScheduleFormRoute,
+    page: () => const SubScheduleForm(),
+    binding: SubScheduleFormBinding(),
+  ),
+  GetPage(
+    name: Routes.ledgerGroupRoute,
+    page: () => const LedgerGroupList(),
+    binding: SubScheduleListBinding(),
+  ),
+  GetPage(
+    name: Routes.ledgerGroupFormRoute,
+    page: () => const LedgerGroupForm(),
+    binding: SubScheduleFormBinding(),
+  ),
+  GetPage(
+    name: Routes.generalLedgerFormRoute,
+    page: () => const GeneralLedgerForm(),
+    binding: GeneralLedgerFormBinding(),
+  ),
+  GetPage(
+    name: Routes.generalLedgerRoute,
+    page: () => const GeneralLedgerList(),
+    binding: GeneralLedgerListBinding(),
+  ),
+  GetPage(
+    name: Routes.voucherTypeRoute,
+    page: () => const VoucherTypeList(),
+    binding: VoucherTypeListBinding(),
+  ),
+  GetPage(
+    name: Routes.voucherTypeFormRoute,
+    page: () => const VoucherTypeForm(),
+    binding: VoucherTypeFormBinding(),
   )
 ];

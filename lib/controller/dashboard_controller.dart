@@ -19,15 +19,24 @@ class DashboardController extends BaseController {
     Get.offNamed(Routes.loginRoute);
   }
 
-  onDivisionTap() {
-    Get.toNamed(Routes.divisionRoute);
-  }
-
-  onCostCentreTap() {
-    Get.toNamed(Routes.costCenterRoute);
-  }
-
-  onLedgerTypeTap() {
-    Get.toNamed(Routes.ledgerTypeRoute);
+  onDrawerTap(index) {
+    switch (index) {
+      case 0:
+        return Get.toNamed(Routes.divisionRoute);
+      case 1:
+        return Get.toNamed(Routes.costCenterRoute);
+      case 2:
+        return Get.toNamed(Routes.ledgerTypeRoute);
+      case 3:
+        return Get.toNamed(Routes.mainScheduleRoute);
+      case 4:
+        return Get.toNamed(Routes.subScheduleRoute);
+      case 5:
+        return Get.toNamed(Routes.ledgerGroupRoute);
+      case 6:
+        return Get.toNamed(Routes.generalLedgerRoute);
+      case 7:
+        return Get.toNamed(Routes.voucherTypeRoute);
+    }
   }
 }

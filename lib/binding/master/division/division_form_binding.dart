@@ -1,9 +1,9 @@
-import 'package:accounting_app/controller/controller.dart';
 import 'package:get/get.dart';
 
-import '../repository/repository.dart';
+import '../../../controller/controller.dart';
+import '../../../repository/repository.dart';
 
-class DivisionBinding extends Bindings {
+class DivisionFormBinding extends Bindings {
   @override
   void dependencies() {
     Get.lazyPut<MasterFormRepository>(() => MasterFormRepository(Get.find()));

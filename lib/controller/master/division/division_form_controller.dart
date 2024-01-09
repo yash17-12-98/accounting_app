@@ -2,15 +2,15 @@ import 'package:accounting_app/app/functions.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../model/model.dart';
-import '../repository/repository.dart';
-import '../resources/resources.dart';
-import 'base_controller.dart';
+import '../../../model/model.dart';
+import '../../../repository/repository.dart';
+import '../../../resources/resources.dart';
+import '../../base_controller.dart';
 
-class DivisionController extends BaseController {
+class DivisionFormController extends BaseController {
   final MasterFormRepository masterFormRepository;
 
-  DivisionController(this.masterFormRepository);
+  DivisionFormController(this.masterFormRepository);
 
   final divisionNameController = TextEditingController();
 

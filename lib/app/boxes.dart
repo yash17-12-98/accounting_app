@@ -14,7 +14,7 @@ class HiveBox {
   static Box<CostCentre> costCentreBox() =>
       Hive.box<CostCentre>(AppConstant.costCentreBox);
 
-  static Box<LedgerType> ledgerBox() =>
+  static Box<LedgerType> ledgerTypeBox() =>
       Hive.box<LedgerType>(AppConstant.ledgerTypeBox);
 
   static Box<MainSchedule> mainScheduleBox() =>

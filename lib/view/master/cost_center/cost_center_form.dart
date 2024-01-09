@@ -1,13 +1,14 @@
 import 'package:accounting_app/app/validator.dart';
-import 'package:accounting_app/controller/controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../resources/resources.dart';
-import '../../widgets/widget.dart';
+import '../../../controller/controller.dart';
+import '../../../model/model.dart';
+import '../../../resources/resources.dart';
+import '../../../widgets/widget.dart';
 
-class LedgerTypeForm extends GetView<LedgerTypeController> {
-  const LedgerTypeForm({super.key});
+class CostCenterForm extends GetView<CostCenterFormController> {
+  const CostCenterForm({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -28,23 +29,22 @@ class LedgerTypeForm extends GetView<LedgerTypeController> {
                   ),
                   const SizedBox(height: 35.0),
                   AppTextField(
-                    validator: Validator.checkLedgerTypeName,
-                    title: AppStrings.ledgerType,
+                    validator: Validator.checkCostCentreName,
+                    title: AppStrings.costCenter,
                     viewBorder: false,
-                    hintText: AppStrings.enterLedgerTypeName,
+                    hintText: AppStrings.enterCostCentreName,
                     shadowColor: ColorManager.lightGrey,
                     elevation: 10,
-                    controller: controller.ledgerTypeNameController,
+                    controller: controller.costCenterController,
                   ),
                   const SizedBox(height: 30.0),
-                  AppTextField(
-                    validator: Validator.checkLedgerTypeRemarks,
-                    title: AppStrings.ledgerTypeRemarks,
-                    viewBorder: false,
-                    hintText: AppStrings.enterLedgerTypeRemarks,
-                    shadowColor: ColorManager.lightGrey,
-                    elevation: 10,
-                    controller: controller.ledgerTypeRemarkController,
+                  AppDropDownField<Division>(
+                    title: AppStrings.division,
+                    hint: AppStrings.selectDivision,
+                    selectedValue: controller.division,
+                    items: controller.menuItems,
+                    validator: Validator.checkDivisionSelection,
+                    onChanged: controller.onDivisionChange,
                   ),
                   const SizedBox(height: 40.0),
                   MaterialButton(
