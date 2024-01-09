@@ -2,7 +2,7 @@ import 'package:hive/hive.dart';
 
 part 'voucher_type.g.dart';
 
-@HiveType(typeId: 4)
+@HiveType(typeId: 8)
 class VoucherType extends HiveObject {
   @HiveField(0, defaultValue: 'voucherType_id')
   String voucherTypeId;
