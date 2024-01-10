@@ -73,12 +73,12 @@ List<GetPage> pages = [
   GetPage(
     name: Routes.ledgerGroupRoute,
     page: () => const LedgerGroupList(),
-    binding: SubScheduleListBinding(),
+    binding: LedgerGroupListBinding(),
   ),
   GetPage(
     name: Routes.ledgerGroupFormRoute,
     page: () => const LedgerGroupForm(),
-    binding: SubScheduleFormBinding(),
+    binding: LedgerGroupFormBinding(),
   ),
   GetPage(
     name: Routes.generalLedgerFormRoute,

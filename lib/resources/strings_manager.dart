@@ -34,9 +34,15 @@ class AppStrings {
   static const String mainScheduleRemarks = "Main Schedule Remarks";
   static const String subScheduleRemarks = "Sub Schedule Remarks";
   static const String enterMainScheduleRemarks = "Enter main schedule remarks";
+  static const String enterLedgerGroupRemarks = "Enter ledger group remarks";
+  static const String enterLedgerGroupName = "Enter ledger group name";
+  static const String ledgerGroupRemarks = "Ledger group remarks";
+  static const String voucherTypeRemarks = "Voucher type remarks";
   static const String enterSubScheduleRemarks = "Enter sub schedule remarks";
   static const String enterLedgerTypeName = "Enter ledger type name";
   static const String enterLedgerTypeRemarks = "Enter ledger type remarks";
+  static const String enterVoucherTypeRemarks = "Enter voucher type remarks";
+  static const String enterVoucherTypeName = "Enter voucher type name";
   static const String mainSchedule = "Main Schedule";
   static const String subSchedule = "Sub Schedule";
   static const String ledgerGroup = "Ledger Group";

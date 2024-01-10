@@ -7,7 +7,7 @@ import '../../../controller/controller.dart';
 import '../../../model/model.dart';
 import '../../../resources/resources.dart';
 
-class VoucherTypeList extends GetView<VoucherTypeFormController> {
+class VoucherTypeList extends GetView<VoucherTypeListController> {
   const VoucherTypeList({super.key});
 
   @override
@@ -24,7 +24,7 @@ class VoucherTypeList extends GetView<VoucherTypeFormController> {
                     color: ColorManager.lightPurple,
                     borderRadius: BorderRadius.circular(10.0)),
                 child: InkWell(
-                  onTap: () => Get.toNamed(Routes.divisionFormRoute),
+                  onTap: () => Get.toNamed(Routes.voucherTypeFormRoute),
                   child: const Padding(
                     padding: EdgeInsets.all(10.0),
                     child: Icon(

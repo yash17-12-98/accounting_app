@@ -77,4 +77,18 @@ class Validator {
     }
     return null;
   }
+
+  static String? checkLedgerGroupName(String? name) {
+    if (name != null && name.isEmpty) {
+      return 'Please enter ledger group name';
+    }
+    return null;
+  }
+
+  static String? checkLedgerGroupRemarks(String? name) {
+    if (name != null && name.isEmpty) {
+      return 'Please enter ledger group remarks';
+    }
+    return null;
+  }
 }

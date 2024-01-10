@@ -1,4 +1,5 @@
 import 'package:accounting_app/app/boxes.dart';
+import 'package:accounting_app/app/extensions.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:hive_flutter/hive_flutter.dart';
@@ -24,8 +25,7 @@ class LedgerGroupList extends GetView<LedgerGroupListController> {
                     color: ColorManager.lightPurple,
                     borderRadius: BorderRadius.circular(10.0)),
                 child: InkWell(
-                  onTap: () => Get.toNamed(Routes.divisionFormRoute,
-                      arguments: {'isEdit': false}),
+                  onTap: () => Get.toNamed(Routes.ledgerGroupFormRoute),
                   child: const Padding(
                     padding: EdgeInsets.all(10.0),
                     child: Icon(
@@ -62,9 +62,11 @@ class LedgerGroupList extends GetView<LedgerGroupListController> {
                         itemBuilder: (BuildContext context, int index) {
                           final ledgerGroup = data[index];
                           return ListTile(
-                            onTap: () => Get.toNamed(Routes.divisionFormRoute,
-                                arguments: {'isEdit': true}),
-                            title: Text(ledgerGroup.ledgerGroupName),
+                            onTap: () => Get.toNamed(
+                                Routes.ledgerGroupFormRoute),
+                            title: Text(ledgerGroup.ledgerGroupName.orEmpty()),
+                            subtitle:
+                                Text(ledgerGroup.ledgerGroupRemarks.orEmpty()),
                             shape: RoundedRectangleBorder(
                               side: const BorderSide(
                                   color: Colors.black, width: 1),
