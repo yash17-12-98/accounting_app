@@ -1,4 +1,4 @@
-import 'package:accounting_app/model/master/division.dart';
+import '../model/model.dart';
 
 class Validator {
   static String? checkPhoneNumber(String? number) {
@@ -32,6 +32,34 @@ class Validator {
   static String? checkDivisionSelection(Division? division) {
     if (division == null) {
       return 'Please select a division';
+    }
+    return null;
+  }
+
+  static String? checkMainScheduleSelection(MainSchedule? mainSchedule) {
+    if (mainSchedule == null) {
+      return 'Please select a main schedule';
+    }
+    return null;
+  }
+
+  static String? checkSubScheduleSelection(SubSchedule? subSchedule) {
+    if (subSchedule == null) {
+      return 'Please select a sub schedule';
+    }
+    return null;
+  }
+
+  static String? checkLedgerGroupSelection(LedgerGroup? ledgerGroup) {
+    if (ledgerGroup == null) {
+      return 'Please select a ledger group';
+    }
+    return null;
+  }
+
+  static String? checkLedgerTypeSelection(LedgerType? ledgerType) {
+    if (ledgerType == null) {
+      return 'Please select a ledger type';
     }
     return null;
   }
@@ -88,6 +116,20 @@ class Validator {
   static String? checkLedgerGroupRemarks(String? name) {
     if (name != null && name.isEmpty) {
       return 'Please enter ledger group remarks';
+    }
+    return null;
+  }
+
+  static String? checkGeneralLedgerName(String? name) {
+    if (name != null && name.isEmpty) {
+      return 'Please enter general ledger name';
+    }
+    return null;
+  }
+
+  static String? checkGeneralLedgerRemark(String? name) {
+    if (name != null && name.isEmpty) {
+      return 'Please enter general ledger remarks';
     }
     return null;
   }

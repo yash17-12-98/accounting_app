@@ -23,6 +23,9 @@ class AppStrings {
   static const String master = "Master";
   static const String division = "Division";
   static const String selectDivision = "Select a division";
+  static const String selectMainSchedule = "Select a main schedule";
+  static const String selectSubSchedule = "Select a sub schedule";
+  static const String selectLedgerGroup = "Select a ledger group";
   static const String costCenter = "Cost Centre";
   static const String enterDivisionName = "Enter division name";
   static const String enterMainScheduleName = "Enter main schedule name";
@@ -36,8 +39,11 @@ class AppStrings {
   static const String enterMainScheduleRemarks = "Enter main schedule remarks";
   static const String enterLedgerGroupRemarks = "Enter ledger group remarks";
   static const String enterLedgerGroupName = "Enter ledger group name";
+  static const String enterGeneralLedgerName = "Enter general ledger name";
+  static const String enterGeneralLedgerRemark = "Enter general ledger remarks";
   static const String ledgerGroupRemarks = "Ledger group remarks";
   static const String voucherTypeRemarks = "Voucher type remarks";
+  static const String generalLedgerRemarks = "General ledger remarks";
   static const String enterSubScheduleRemarks = "Enter sub schedule remarks";
   static const String enterLedgerTypeName = "Enter ledger type name";
   static const String enterLedgerTypeRemarks = "Enter ledger type remarks";

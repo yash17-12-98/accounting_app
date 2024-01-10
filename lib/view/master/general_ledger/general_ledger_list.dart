@@ -24,8 +24,7 @@ class GeneralLedgerList extends GetView<GeneralLedgerListController> {
                     color: ColorManager.lightPurple,
                     borderRadius: BorderRadius.circular(10.0)),
                 child: InkWell(
-                  onTap: () => Get.toNamed(Routes.divisionFormRoute,
-                      arguments: {'isEdit': false}),
+                  onTap: () => Get.toNamed(Routes.generalLedgerFormRoute),
                   child: const Padding(
                     padding: EdgeInsets.all(10.0),
                     child: Icon(
@@ -62,8 +61,6 @@ class GeneralLedgerList extends GetView<GeneralLedgerListController> {
                         itemBuilder: (BuildContext context, int index) {
                           final generalLedger = data[index];
                           return ListTile(
-                            onTap: () => Get.toNamed(Routes.divisionFormRoute,
-                                arguments: {'isEdit': true}),
                             title: Text(generalLedger.generalLedgerName),
                             shape: RoundedRectangleBorder(
                               side: const BorderSide(
