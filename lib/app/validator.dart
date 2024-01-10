@@ -49,4 +49,32 @@ class Validator {
     }
     return null;
   }
+
+  static String? checkMainScheduleName(String? name) {
+    if (name != null && name.isEmpty) {
+      return 'Please enter main schedule name';
+    }
+    return null;
+  }
+
+  static String? checkMainScheduleRemarks(String? name) {
+    if (name != null && name.isEmpty) {
+      return 'Please enter main schedule remarks';
+    }
+    return null;
+  }
+
+  static String? checkSubScheduleName(String? name) {
+    if (name != null && name.isEmpty) {
+      return 'Please enter sub schedule name';
+    }
+    return null;
+  }
+
+  static String? checkSubScheduleRemarks(String? name) {
+    if (name != null && name.isEmpty) {
+      return 'Please enter sub schedule remarks';
+    }
+    return null;
+  }
 }

@@ -7,7 +7,7 @@ import '../../../controller/controller.dart';
 import '../../../model/model.dart';
 import '../../../resources/resources.dart';
 
-class MainScheduleList extends GetView<MainScheduleFormController> {
+class MainScheduleList extends GetView<MainScheduleListController> {
   const MainScheduleList({super.key});
 
   @override
@@ -24,7 +24,7 @@ class MainScheduleList extends GetView<MainScheduleFormController> {
                     color: ColorManager.lightPurple,
                     borderRadius: BorderRadius.circular(10.0)),
                 child: InkWell(
-                  onTap: () => Get.toNamed(Routes.divisionFormRoute),
+                  onTap: () => Get.toNamed(Routes.mainScheduleFormRoute),
                   child: const Padding(
                     padding: EdgeInsets.all(10.0),
                     child: Icon(
